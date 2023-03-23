@@ -87,11 +87,17 @@ $fourth: darken($third, 0%);
     #chooseField{
       height: 40%;
       width: 400px;
+      border-radius: 5px;
+      padding-left: 15px;
+      box-shadow: 2px 2px 4px;
+
     }
     #chooseButton{
       height: 40%;
       width: 80px;
       margin-left: 10px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 4px;
     }
   }
   #incredients{
@@ -119,7 +125,16 @@ $fourth: darken($third, 0%);
         height: 70px;
         margin: 20px;
         border-radius: 15px;
+        box-shadow: 3px 3px 5px;
+
       }
+    }
+
+    .deleteButton{
+      color: red;
+      position: relative;
+      top: 20px;
+      left: 200px;
     }
 
     .ingredient{
@@ -134,9 +149,11 @@ $fourth: darken($third, 0%);
       word-break: break-all;
       padding: 5px;
       padding-inline: 5px;
+      font-size:  20px;
+      box-shadow: 5px 5px 5px;
+
     }
   }
-
 }
 
 
@@ -160,7 +177,7 @@ $fourth: darken($third, 0%);
       margin: 20px;
       background-color: #f8e9e9;
       width: 90%;
-      height: 35vh;
+      height: 40vh;
       border-radius: 20px;
       box-shadow: 8px 8px 20px -2px;
 
@@ -190,12 +207,12 @@ $fourth: darken($third, 0%);
           li {
           //  font-size: 15px;
             color: grey;
-            margin-left: 42px;
+            margin-left: 32px;
           }
 
           .linkDiv{
             margin: 25px;
-            margin-left: 40px;
+            margin-left: 30px;
             margin-top: 0px;
             font-size: 20px;
 

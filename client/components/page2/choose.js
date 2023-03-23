@@ -15,7 +15,7 @@ import Ingredient from './ingredient';
       console.log("change")
       const array = [];
       for(let el in this.props.state.incredients){
-        array.push([<Ingredient change={this.change} updateIncredient={this.props.updateIncredient} value={[el, this.props.state.incredients[el]]}/>])
+        array.push([<Ingredient delete={this.props.delete} change={this.change} updateIncredient={this.props.updateIncredient} value={[el, this.props.state.incredients[el]]}/>])
       }
      this.setState({boxes: array});
     }

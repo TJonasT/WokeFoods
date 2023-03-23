@@ -11,7 +11,6 @@ import React, { Component } from 'react';
       this.props.list.forEach((element, index) => {
         if(index < 9) {
           list.push(<li>{element}</li>)
-          
         };
       });
 

@@ -26,22 +26,21 @@ const PORT = 3000;
     res.status(201).json("res.locals.incredients");
   })
 
-  // app.use('/api/create', userController.createUser,
-  // (req, res) => { console.log("status send")
-  //   res.sendStatus(201);
-  // })
+  
 
   app.post('/api/recipe', resController.getRecipe,
   (req, res) => { 
     res.status(200).json(res.locals.recipe)
   })
 
-  app.get('/', (req, res) => {
+  app.delete('/api/user', userController.delete, (req, res)=>{
+    res.sendStatus(201)
+  })
+
+
+  app.get('/', (req, res) => {console.log(2)
     return res.status(200).sendFile(path.join(__dirname, '../index.html'));
   });
-
-
-
   
 
   app.use(({ code, error }, req, res, next) => {

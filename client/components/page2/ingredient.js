@@ -8,10 +8,15 @@ import React, { Component } from 'react';
 
     render(){
       return (
-        <button value = {this.props.value} style={{color: this.props.value[1]}} className='ingredient' onClick={()=>{this.props.updateIncredient(this.props.value)
-        this.props.change()}}>
-          {this.props.value[0]}
-        </button>
+        <div>
+          <button className='deleteButton' onClick={()=>{this.props.delete(this.props.value)
+          this.props.change()}}>X</button>
+
+          <button value = {this.props.value} style={{color: this.props.value[1]}} className='ingredient' onClick={()=>{this.props.updateIncredient(this.props.value)
+          this.props.change()}}>
+            {this.props.value[0]}
+          </button>
+        </div>
       )
     }
 

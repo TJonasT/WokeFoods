@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-//const { String, array } = require('prop-types');
 
 const URI = 'mongodb+srv://jonasgantar:italien14@solo.bqdrmgr.mongodb.net/?retryWrites=true&w=majority'
+
 mongoose.connect(URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
