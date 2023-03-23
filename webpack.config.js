@@ -16,7 +16,8 @@ module.exports = {
 
   devServer: {
       proxy: {
-        '/api/recipe': 'http://localhost:3000'
+        '/api/recipe': 'http://localhost:3000',
+        '/api/user': 'http://localhost:3000'
       },
   },
 
