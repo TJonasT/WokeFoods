@@ -7,14 +7,15 @@ import Ingredient from './ingredient';
       super(props);
       this.change = this.change.bind(this);
       this.state = {
-        boxes: [<Ingredient value={"el"}/>]
+        boxes: []
       }
     }
 
     change(){
+      console.log("change")
       const array = [];
       for(let el in this.props.state.incredients){
-        array.push([<Ingredient value={el}/>])
+        array.push([<Ingredient change={this.change} updateIncredient={this.props.updateIncredient} value={[el, this.props.state.incredients[el]]}/>])
       }
      this.setState({boxes: array});
     }
@@ -22,8 +23,7 @@ import Ingredient from './ingredient';
   
 
     render(){
-      console.log(this.props)
-      const arr = [<Ingredient value="hifddt"/>]
+
       return (
         <div id="choose">
           <div id='addIncredients'>

@@ -7,11 +7,11 @@ import React, { Component } from 'react';
     }
 
     render(){
-
       return (
-        <div className='ingredient'>
-          {this.props.value}
-        </div>
+        <button value = {this.props.value} style={{color: this.props.value[1]}} className='ingredient' onClick={()=>{this.props.updateIncredient(this.props.value)
+        this.props.change()}}>
+          {this.props.value[0]}
+        </button>
       )
     }
 

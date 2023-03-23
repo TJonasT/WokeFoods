@@ -126,10 +126,9 @@ $fourth: darken($third, 0%);
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: lightgreen;
       border: 1px solid;
-      height: 150px;
-      width: 150px;
+      height: 200px;
+      width: 200px;
       border-radius: 10px;
       margin: 7px;
       word-break: break-all;
@@ -137,6 +136,97 @@ $fourth: darken($third, 0%);
       padding-inline: 5px;
     }
   }
-  
 
 }
+
+
+#cardPage{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(5, 70, 5, 0.511);
+  min-height: 100vh;
+  height: auto;
+
+  #cardFeed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(212, 212, 199, 0.983);
+    min-height: 100vh;
+    height: auto;
+    width: 50%;
+
+    .recipeCard{
+      margin: 20px;
+      background-color: #f8e9e9;
+      width: 90%;
+      height: 35vh;
+      border-radius: 20px;
+      box-shadow: 8px 8px 20px -2px;
+
+
+      .upper{
+        display: flex;
+        margin: 5px;
+
+        .upperRight{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background-color: #dfcfcf;
+          width: 100%;
+
+          .label{
+            font-size: 30px;
+            //font-weight: bold;
+            margin: 15px;
+            margin-bottom: 0px;
+          }
+
+          .list{
+            display: flex;
+            margin: 0px;
+          }
+          li {
+          //  font-size: 15px;
+            color: grey;
+            margin-left: 42px;
+          }
+
+          .linkDiv{
+            margin: 25px;
+            margin-left: 40px;
+            margin-top: 0px;
+            font-size: 20px;
+
+            .link{
+            text-decoration: none;
+            }
+          }
+        }
+
+
+
+        .pic{
+          border-radius: 20px 0 0 0;
+            margin-right: 10px;
+        }
+      }
+
+    }
+
+
+  }
+
+  #incs{
+    display: grid;
+    margin: 30px;
+    margin-bottom: 50px;
+    grid-template-columns: [first] 1fr [line2] 1fr;
+    height: 16vh;
+  }
+
+
+}
+
+ 
