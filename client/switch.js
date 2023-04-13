@@ -32,7 +32,7 @@ class Switch extends Component{
     const stateObj = this.state.incredients
     delete stateObj[input[0]]
     this.setState({incredients: stateObj})
-    console.log(this.state.incredients)
+
 
     const res = axios.delete('/api/user', { data: { incredients: input, username: this.state.username } })
   }
@@ -43,7 +43,7 @@ class Switch extends Component{
     if(input[1]==="green")objIn[input[0]] = "red";
 
     this.setState({incredients: objIn})
-    console.log(this.state.incredients)
+
   }
 
 
@@ -70,6 +70,10 @@ class Switch extends Component{
       if(this.state.incredients[el] === "green") str += `${el} `
     }
     
+    if(!str) {
+      window.alert("please choose at least one ingredient");
+      return
+    };
     fetch('/api/recipe', {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
@@ -77,15 +81,14 @@ class Switch extends Component{
     })
     .then((res) => res.json())
     .then(result => {
-      console.log(result)
-      console.log("---")
+      if(!result[0]) {
+        window.alert("please refine your search");
+        return;
+      };
       this.setState({recipes: result})
       this.setState({render: <Here state={this.state}/>})
     })
-    //  .catch((err)=>console.log(err));
-
-
-
+      .catch((err)=>console.log("error in recipe fetch"));
   }
 
 
@@ -103,23 +106,14 @@ class Switch extends Component{
   }
   
   renderSwitch(input){
-
-    // fetch('/api/user',{
-    //   method: "POST",
-    //    headers: {'Content-Type': 'application/json'},
-    //    body: JSON.stringify({username: "input"})
-    // }
-    // )
-
     fetch('/api/user', {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({username: input})
     })
     .then((res) => res.json())
-    .then(result => {console.log("result")
+    .then(result => {
       if(result.error) return false;
-
       this.setState({incredients: result, username: input})
       this.setState({ render: <Choose delete={this.delete} updateIncredient={this.updateIncredient} state={this.state} addIncredient={this.addIncredient} getRecipe={this.getRecipe} />})
     });
@@ -127,7 +121,6 @@ class Switch extends Component{
   }
 
   render(){
-
     return(
       <div>
         {this.state.render}
