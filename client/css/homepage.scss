@@ -18,13 +18,25 @@ $fourth: darken($third, 0%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $tertiary;
+  background-image: url('../images/61+gTBhKZGL.jpg');
+  opacity: 0.70;
+  // background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  
+
+  //background-image: linear-gradient(#01418b, #462884, #4f237c,#8b0174, #eb1a27);
   height: 100vh;
 
   #loginheader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #938080;
     margin-top: 4%;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgb(255, 255, 255);
     font-size: 60px;
+    width: 30%;
+    height: 12%;
   }
 
 
@@ -32,9 +44,8 @@ $fourth: darken($third, 0%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    //justify-content:space-around;
-    background-color: lighten(darkgreen, 0%);
-    margin-top: 8%;
+    background-color: lighten(rgb(91, 122, 75), 0%);
+    margin-top: 5%;
     height: 45%;
     width: 55%;
     border-radius: 50px;
@@ -119,6 +130,7 @@ $fourth: darken($third, 0%);
       color: #f8e9e9;
       padding: 10px;
       margin-bottom: 10px;
+      width: 99vw;
 
       .recipeButton{
         width: 200px;
@@ -139,19 +151,17 @@ $fourth: darken($third, 0%);
 
     .ingredient{
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       border: 1px solid;
       height: 200px;
       width: 200px;
       border-radius: 10px;
-      margin: 7px;
       word-break: break-all;
-      padding: 5px;
-      padding-inline: 5px;
       font-size:  20px;
+      padding: 15px;
       box-shadow: 5px 5px 5px;
-
+      margin-inline: 20px;
     }
   }
 }
@@ -171,18 +181,19 @@ $fourth: darken($third, 0%);
     background-color: rgba(212, 212, 199, 0.983);
     min-height: 100vh;
     height: auto;
-    width: 50%;
+    width: 55%;
 
     .recipeCard{
       margin: 20px;
       background-color: #f8e9e9;
-      width: 90%;
-      height: 40vh;
+      width: 75%;
+      height: auto;
       border-radius: 20px;
       box-shadow: 8px 8px 20px -2px;
 
 
       .upper{
+        height: 45%;
         display: flex;
         margin: 5px;
 
@@ -195,7 +206,7 @@ $fourth: darken($third, 0%);
 
           .label{
             font-size: 30px;
-            //font-weight: bold;
+            font-weight: bold;
             margin: 15px;
             margin-bottom: 0px;
           }
