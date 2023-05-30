@@ -8,7 +8,7 @@ console.log(q)
 
     if(!q) next({error: 'recepie error q not defined', code: '418'})
 
-    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${q}&app_id=330b0a82&app_key=700c671dd4251b92ff2ea1143faf2839%09&`
+    const url = ``
     fetch (url)
     .then((response) => response.json())
     .then((data) => {
