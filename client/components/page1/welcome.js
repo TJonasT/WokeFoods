@@ -11,17 +11,21 @@ import React, { Component } from 'react';
 
       return (
         <div id="login" > 
-          <h1 id= "loginheader">Woke foods</h1>
+          <h1 id= "loginheader"> WokeFoods</h1>
 
           <div id = "box">
             <div className='innerBox'>
-             <input id="idField1" className="field1" type="search" onChange={()=>console.log(2)} ></input>
-             <button className="button1" onClick={()=>this.props.signin(document.querySelector('#idField1').value)}>login</button>
+             <input id="idField1" className="field1" type="search" ></input>
+             <button className="button1" onClick={()=>this.props.signin(document.querySelector('#idField1').value)}>username</button>
+            </div>
+            <div className='innerBox'>
+             <input id="idField1" className="field1" type="search" ></input>
+             <button className="button1" onClick={()=>this.props.signin(document.querySelector('#idField1').value)}>password</button>
             </div>
 
             <div className='innerBox'>
-             <input id="idField2" className="field1" type="search" onChange={()=>console.log(2)} ></input>
-             <button className="button1" onClick={()=>this.props.create(document.querySelector('#idField2').value)}>signup</button>
+             <input id="idField2" className="field1" type="search" ></input>
+             <button className="button1" onClick={()=>this.props.create(document.querySelector('#idField2').value)}>sign up</button>
             </div>
           </div>
         </div>
