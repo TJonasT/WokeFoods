@@ -9,3 +9,10 @@ I dare you to guess what I searched for!
 But you don't want to put in the ingredients every time you need to cook? No worries, just create a user and save the potential contents of your fridge once. Now you can select and deselect all your ingredients with only one click and cook to your heart's content.
 
 ![welp that didnt load](./client/images/previewFrontPage.png)
+
+Frontend: React Classes (why? no idea, wanted to try it)
+Backend: Express
+Styling: SASS
+API: https://api.edamam.com/
+
+
